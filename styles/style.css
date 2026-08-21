@@ -34,7 +34,7 @@
   margin-right: auto;       
   box-sizing: border-box; 
   background-image: var(--background-image-main);
-  background-size: 1440px 960px;
+  background-size: auto 960px;
   background-position: top center;
   background-repeat: no-repeat;
   background-color: var(--background-color);
