@@ -29,7 +29,7 @@
   font-size: var(--fsize-main);
   font-variation-settings: 'wght' var(--fweight-main, 400);
   width: 100%;
-  max-width: 1200px;         
+  max-width: 700px;         
   margin-left: auto;
   margin-right: auto;       
   box-sizing: border-box; 
@@ -37,7 +37,7 @@
   background-size: auto 960px;
   background-position: top center;
   background-repeat: no-repeat;
-  background-color: var(--background-color);
+  background-color: var(--background-color);   
 }
 
 .header {
@@ -46,7 +46,7 @@
 }
 
 .header_block {
-  padding-block-start: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  padding-block-start: clamp(6.5rem, 7.3239rem + 0.7512vw, 8rem);
   padding-block-end: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
 }
 
@@ -59,7 +59,7 @@
 }
 
 .header_block,
-.card_block {
+.card_list {
   flex-direction: column;
   min-inline-size: 100%;
   background-color: var(--background-color);
@@ -81,14 +81,13 @@
 }
 
 .header__logo {
-  font-size: clamp(3.063rem, 2.7109rem + 1.5023vw, 4.063rem);
+  font-size: clamp(4.063rem, 2.7109rem + 1.5023vw, 4.063rem);
   font-variation-settings: 'wght' var(--fweight-main, 400);
   line-height: 1;
 }
 
 .header__title {
-  margin-top: 20px;
-  font-size: clamp(0.875rem, 0.6768rem + 0.8458vw, 1.438rem);
+  font-size: clamp(0.875rem, 2.6768rem + 0.8458vw, 1.438rem);
 }
 
 .card_section {
@@ -100,13 +99,11 @@
   max-inline-size: 100%;
   flex-direction: column;
   gap: var(--gap-card);
+  margin-block-end: 50px;
 }
 
 .card_title {
   font-size: inherit;
-  padding-block-start: 4px;
-  padding-block-end: 6px;
-  padding-inline: 10px;
   font-variation-settings: 'wght' var(--fweight-title, 700);
   border-bottom: var(--outline-main);
 }
@@ -167,10 +164,9 @@
   z-index: 1;
 }
 
-@supports ((text-stroke: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
+@supports ((-webkit-text: 1px var(--background-color)) or (-webkit-text-stroke: 1px var(--background-color))) {
   .watermark {
     -webkit-text-stroke: 1px var(--background-color);
-    text-stroke: 1px var(--background-color);
     text-shadow: none;
   }
 }
@@ -193,7 +189,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end;
-  column-gap: 8px;
+  column-gap: 5px;
   margin-block-end: 25px;
   margin-inline-end: 25px;
   align-items: center;
@@ -238,13 +234,13 @@ svg.like-icon {
 .save {
   margin: auto;
   text-wrap: nowrap;
-  padding-block-start: 15px;
-  padding-block-end: 15px;
-  padding-inline-start: 20px;
-  padding-inline-end: 20px;
+  padding-block-start: 7px;
+  padding-block-end: 4px;
+  padding-inline-start: 19px;
+  padding-inline-end: 18px;
   gap: 8px;
-  margin-top: 52px;
-  margin-bottom: 100px;
+  margin-top: 48px;
+  margin-bottom: 102px;
   border: var(--outline-main);
 }
 
@@ -416,18 +412,118 @@ dialog::backdrop {
   border: var(--outline-main);
 }
 
-@media (width >= 376px) {
-  .page {
-    max-inline-size: 700px;
+@media (width <= 461px) {
+
+  .header {
+    margin-block-end: 12px;
+  }
+
+  .header__logo {
+    font-size: clamp(3.463rem, 0.7109rem + 0.5023vw, 0.063rem);
+    padding-block-end: 32px;
+    margin-top: 14px;
+    padding-bottom: 20px;
+  }
+
+  .header__title {
+    font-size: clamp(0.875rem, 0.75rem + 0.8458vw, 1.438rem);
+    padding-bottom: 13px;
+  }
+
+  .card_title {
+    margin-block-start: 7px;
+    padding-inline-start: 12px;
+    font-size: 20px;
+    padding-bottom: 4px;
+    }
+
+  .card_section {
+    width: 100%;
+    box-sizing: border-box;
+  } 
+
+  .card_text {
+    padding-inline-start: 33px;
+    padding-block-start: 26px;
+    font-size: 20px;
+  }
+
+  .watermark {
+    inset-inline-end: clamp(1.7rem, 0.4859rem + 0.1268vw, 4.5rem);
+    inset-block-start: clamp(1.9em, 0.4778rem + 0.0946vw, 6.563rem);
+    font-size: 0.999rem;
+  }
+
+  .section_button {
+    column-gap: 8px;
+    margin-block-end: 29px;
+    margin-inline-end: 31px;
+  }
+
+  .card__icon-button {
+    width: 42px;
+    height: 38px;
+  }
+
+  .card__like-button {
+    inline-size: 145px;
+    block-size: 41px;
+    margin-top: 6px;
+  }
+
+  .card_list {
+    margin-block-end: 54px;
+  }
+
+  .floppy {
+    width: 32px;
+    margin-inline-end: 6px;
+    margin-top: 1px;
   }
 
   .save {
-    white-space: nowrap;
-    flex-direction: row;
+    padding-block-start: 12px;
+    padding-block-end: 15px;
+  }
+
+  .button__text {
+    font-size: 0.975rem;
+  }
+}
+
+@media (width >= 421px) {
+  
+  .header__logo {
+    font-size: clamp(4.063rem, 2.7109rem + 1.5023vw, 4.063rem);
+    padding-block-start: 5px;
+  }
+
+  .header__title {
+    
+    margin-top: 23px;
+    font-size: clamp(1.445rem, 2.6768rem + 0.8458vw, 1.00rem);
+  }
+
+  .header {
+    padding-block-end: 100px;
+  }
+
+  .card_title {
+    padding-block-end: 5px;
+    padding-inline: 13px;
+    margin-block-start: 4px;
+  }
+
+  .card_list {
+    margin-block-end: 48px;
+}
+
+  .watermark {
+    inset-inline-end: clamp(1.75rem, 0.4859rem + 1.1268vw, 1.5rem);
   }
 
   svg.floppy  {
-    width: 21px;
+    width: 22px;
   }
 
   .dialog {
@@ -438,5 +534,14 @@ dialog::backdrop {
   .dialog-button {
     min-inline-size: 293px;
   }
-}
 
+  .section_button {
+    margin-inline-end: 26px;
+  }
+
+  .save {
+    white-space: nowrap;
+    flex-direction: row;
+    margin-top: 50px;
+  }
+}
