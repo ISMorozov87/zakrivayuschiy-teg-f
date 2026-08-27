@@ -5,7 +5,7 @@
     --color-text: rgba(0, 0, 0, 1);
     --fsize-main: 18px;
     --fweight-main: 400;
-    --fweight-title: 700;
+    --fweight-title: 715;
     --line-height-text: 1.167;
     --line-height-text-botton: 0.9;
     --line-height-dialog: 1.5;
@@ -22,6 +22,5 @@
     --box-shadow-focus: 2px 2px 0px 0px rgba(0, 0, 0, 1);
     --heart-contour-color: rgba(0, 0, 0, 1);
     --heart-body-color: rgba(255, 0, 0, 1);
-    --linear-gradient(to bottom, #e7e7e7, #e7e7e7 0.01%, #1a1a1a 100%);
     --fweight-text: 410;
 }
